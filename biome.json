@@ -7,8 +7,17 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"]
-	},
+		"includes": [
+			"src/feature/**/*.ts", 
+			"src/feature/**/*.tsx", 
+			"src/routes/**/*.ts", 
+			"src/routes/**/*.tsx", 
+			"src/shared/**/*.ts", 
+			"src/shared/**/*.tsx",
+			"src/App.tsx", 
+			"src/main.tsx", 
+			"src/vite-env.d.ts"
+		]	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab"
