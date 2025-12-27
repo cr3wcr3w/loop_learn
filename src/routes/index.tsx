@@ -1,7 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import Loading from "@/shared/components/custom/loading";
 import { WelcomeMessage } from "@/shared/components/custom/welcomeMessage";
+import { Button } from "@/shared/components/ui/button";
 
 export const Route = createFileRoute("/")({
 	component: Index,
@@ -15,24 +15,18 @@ function Index() {
 	}
 
 	return (
-		<>
-			<div className="flex gap-2">
-				<Link to="/" className="[&.active]:font-bold">
-					Home
-				</Link>{" "}
-				<Link to="/question" className="[&.active]:font-bold">
-					Question
-				</Link>
-				<Link to="/review" className="[&.active]:font-bold">
-					Review
-				</Link>
-			</div>
-
-			<div className="p-2">
-				<h3>Welcome Home!</h3>
-			</div>
-
-			<Loading />
-		</>
+		<main className="h-dvh bg-background p-5">
+			<h3 className="font-bold text-2xl">Welcome to Loop Learn!</h3>
+			<ul className="flex items-center justify-between">
+				<li>
+					<p>Select a category to start reviewing</p>
+				</li>
+				<li>
+					<Button variant="outline" className="cursor-pointer">
+						Manage Questions
+					</Button>
+				</li>
+			</ul>
+		</main>
 	);
 }
